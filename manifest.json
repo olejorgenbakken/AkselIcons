@@ -1,0 +1,13 @@
+{
+  "name": "Aksel Icons",
+  "id": "1220647041208731863",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma",
+    "figjam"
+  ],
+  "ui": "ui.html"
+}
