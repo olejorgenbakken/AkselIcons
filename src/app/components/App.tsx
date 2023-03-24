@@ -60,13 +60,7 @@ function App() {
     );
   }, [toggle, query, strokeIcons, fillIcons]);
 
-  const iconSVG = React.useRef<SVGElement>(undefined);
 
-  const onCreate = (name: string) => {
-    let svg = iconSVG.current.outerHTML;
-    let size = 24;
-    parent.postMessage({ pluginMessage: { type: 'create-icon', svg, size, name } }, '*');
-  };
 
   React.useEffect(() => {
     // This is how we read messages sent from the plugin controller
@@ -104,6 +98,14 @@ function App() {
                         if (T === undefined) {
                           return null;
                         }
+                        const iconSVG = React.useRef<SVGElement>(undefined);
+
+                        const onCreate = (name: string) => {
+                          let svg = iconSVG.current.outerHTML;
+                          let size = 24;
+                          parent.postMessage({ pluginMessage: { type: 'create-icon', svg, size, name } }, '*');
+                        };
+
                         return (
                           <div key={i.id} className='icon' onClick={() => {
                             onCreate(i.name);
