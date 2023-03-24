@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn
+  /usr/local/bin/node /usr/local/bin/yarn add Fuse
 
 PATH: 
   /usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Apple/usr/bin:/Applications/Privileges.app/Contents/Resources
@@ -14,8 +14,8 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@navikt%2faksel-icons/metadata: Request "https://registry.yarnpkg.com/@navikt%2faksel-icons/metadata" returned a 405
-      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:67038:18)
+  Error: https://registry.yarnpkg.com/Fuse: Not found
+      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:67029:18)
       at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
       at Request.emit (node:events:513:28)
       at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141855:10)
@@ -38,6 +38,7 @@ npm manifest:
       "prettier:format": "prettier --write '**/*.{js,jsx,ts,tsx,css,json}' "
     },
     "dependencies": {
+      "@navikt/aksel-icons": "^2.8.2",
       "react": "^18.2.0",
       "react-dom": "^18.2.0"
     },
@@ -56,8 +57,7 @@ npm manifest:
       "typescript": "^4.7.4",
       "url-loader": "^4.1.1",
       "webpack": "^5.74.0",
-      "webpack-cli": "^4.10.0",
-      "@navikt/aksel-icons/metadata": "*"
+      "webpack-cli": "^4.10.0"
     },
     "husky": {
       "hooks": {
@@ -150,6 +150,11 @@ Lockfile:
     dependencies:
       "@jridgewell/resolve-uri" "3.1.0"
       "@jridgewell/sourcemap-codec" "1.4.14"
+  
+  "@navikt/aksel-icons@^2.8.2":
+    version "2.8.2"
+    resolved "https://registry.yarnpkg.com/@navikt/aksel-icons/-/aksel-icons-2.8.2.tgz#40626652511e67a697f93b5cd5325f5cc7e24cfc"
+    integrity sha512-AleT3/ysw7BTGaMqcvRfkmXjeDwWDq0VaU1AON5AX0HLriKUd/j99dERTRRP6/vl0notF7e3lm13ZeF6Glv3mw==
   
   "@nodelib/fs.scandir@2.1.5":
     version "2.1.5"
