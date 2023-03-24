@@ -1,3 +1,5 @@
+![](/src/app/assets/gh-cover.png)
+
 # Aksel Icons plugin
 
 Denne pluginen gir deg mulighet til å se gjennom alle ikonene i Aksel sin ikonpakke fra npm, så du slipper å hente nye oppdateringer fra Figma Community. Pluginen er et sideprosjekt, så om noe ser feil ut, er det nok sikkert det.
