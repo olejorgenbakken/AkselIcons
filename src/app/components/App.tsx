@@ -63,7 +63,6 @@ function App() {
 
 
   React.useEffect(() => {
-    // This is how we read messages sent from the plugin controller
     window.onmessage = (event) => {
       const { type, message } = event.data.pluginMessage;
       if (type === 'create-icon') {
