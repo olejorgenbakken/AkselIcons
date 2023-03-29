@@ -15,9 +15,8 @@ Har du ønsker om nye ikoner, eller ønsker å bidra med å lage nye, lag et iss
 - [ ] Velge mellom fill og stroke versjon
 - [ ] Velge farge
 - [ ] Velge størrelse
-- [ ] Vise de nyeste ikonene i en egen kategori først
-- [ ] Hente alle som nødvendig
-- [ ] *Style pluginen så den ser litt bedre ut*
+- [x] Vise de nyeste ikonene i en egen kategori først
+- [x] *Style pluginen så den ser litt bedre ut*
 
 ## Quickstart (I tilfelle jeg glemmer det på et tidspunkt)
 
