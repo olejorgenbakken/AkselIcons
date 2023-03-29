@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
 import '../styles/ui.css';
 import * as Icons from "@navikt/aksel-icons";
 import meta from "@navikt/aksel-icons/metadata";
@@ -30,24 +29,19 @@ function App() {
     };
   }, []);
 
-  const newIcons = () => {
+  const updatedIcons = () => {
     let sortedIcons = strokeIcons.sort((a, b) => a.updated_at < b.updated_at ? 1 : -1);
     return sortedIcons.slice(0, 10);
   };
 
-  newIcons()
+  updatedIcons()
 
   return (
     <div className='plugin-wrapper'>
-      <header className='header'>
-        <img src={logo} className="logo" />
-        <h1 className='name'>Aksel Icons</h1>
-      </header>
-
       <div className='collection updated'>
         <h2 className='title'>Recently updated</h2>
         <div className='icon-grid'>
-          {newIcons().map((i) => {
+          {updatedIcons().map((i) => {
             const T = Icons[`${i.id}Icon`];
             if (T === undefined) {
               return null;
@@ -82,7 +76,7 @@ function App() {
             {cat.sub_categories.map((sub) => {
               return (
                 <div key={sub.sub_category} className="category">
-                  <h2 className='title'>{cat.category}&nbsp;<span className='sub-category'>| {sub.sub_category}</span></h2>
+                  <h2 className='title'>{cat.category} <span className='sub-category'>{sub.sub_category}</span></h2>
                   <div className='icon-grid'>
                     {sub.icons.map((i) => {
                       const T = Icons[`${i.id}Icon`];
