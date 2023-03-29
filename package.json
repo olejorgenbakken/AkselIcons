@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@navikt/aksel-icons": "^2.8.2",
+    "@navikt/ds-css": "^2.8.5",
+    "@navikt/ds-react": "^2.8.5",
+    "@navikt/ds-tailwind": "^2.8.5",
     "fuse.js": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

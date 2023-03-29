@@ -1,109 +1,64 @@
+@import "tailwindcss/base";
+@import "@navikt/ds-css";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font: 12px sans-serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden auto;
+h1,
+h2 {
+  font-size: var(--a-font-size-heading-small);
+}
+
+h2 {
+  margin-bottom: var(--a-spacing-2);
 }
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgb(225, 237, 255)
+  gap: var(--a-spacing-3);
 }
 
-.icons {
-  padding: 1.5rem 1rem;
+.header .logo {
+  width: var(--a-font-size-heading-small);
+  height: var(--a-font-size-heading-small);
 }
 
-.category,
-.sub-category {
+.header,
+.collection {
+  padding-left: var(--a-spacing-4);
+  padding-right: var(--a-spacing-4);
+}
+
+.collection {
+  padding-top: var(--a-spacing-4);
+  padding-bottom: var(--a-spacing-4);
+  margin-bottom: var(--a-spacing-8);
+}
+
+.collection.updated {
+  background-color: var(--a-deepblue-50);
+}
+
+.collection.all {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: var(--a-spacing-6);
 }
 
-.category {
-  gap: 1rem;
-  margin: 0 0 2rem 0;
-}
-
-.sub-category {
-  gap: 0.5rem;
-  margin: 0 0 1rem 0;
-  width: 100%;
+.collection .title .sub-category {
+  font-size: var(--a-font-size-medium);
+  font-weight: var(--a-font-weight-regular);
+  color: var(--a-text-subtle);
 }
 
 .icon-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  gap: 0.75rem;
-}
-
-.icon {
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.icon:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.icon .name {
-  word-break: break-word;
-}
-
-button {
-  border-radius: 5px;
-  background: white;
-  color: black;
-  border: none;
-}
-
-#create {
-  box-shadow: none;
-  background: #18a0fb;
-  color: white;
-}
-
-input {
-  border: none;
-  outline: none;
-  padding: 8px;
-}
-
-input:hover {
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-button:focus {
-  box-shadow: inset 0 0 0 2px #18a0fb;
-}
-
-#create:focus {
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
-input:focus {
-  box-shadow: inset 0 0 0 2px #18a0fb;
+  gap: var(--a-spacing-4);
+  flex-wrap: wrap;
 }
